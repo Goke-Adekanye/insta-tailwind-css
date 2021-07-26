@@ -711,12 +711,8 @@ video {
   width: 10rem;
 }
 
-.w-2\/5 {
-  width: 40%;
-}
-
-.w-3\/5 {
-  width: 60%;
+.w-4\/5 {
+  width: 80%;
 }
 
 .w-6\/12 {
@@ -1019,9 +1015,23 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:w-3\/5 {
+    width: 60%;
+  }
 }
 
 @media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:w-2\/5 {
+    width: 40%;
+  }
+
+  .md\:w-3\/5 {
+    width: 60%;
+  }
 }
 
 @media (min-width: 1024px) {

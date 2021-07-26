@@ -4,9 +4,11 @@ import { FirebaseContext } from "../context/firebase";
 import UserContext from "../context/user";
 import * as ROUTES from "../constants/routes";
 import { DEFAULT_IMAGE_PATH } from "../constants/paths";
+import useUser from "../hooks/use-user";
 
 export default function Header() {
-  const { user } = useContext(UserContext);
+  const { user: loggedInUser } = useContext(UserContext);
+  const { user } = useUser(loggedInUser?.uid);
   const { firebase } = useContext(FirebaseContext);
   const history = useHistory();
 
@@ -80,8 +82,8 @@ export default function Header() {
                   <Link to={`/p/${user?.username}`}>
                     <img
                       className="rounded-full h-8 w-8 flex"
-                      src={`/images/avatars/${user?.displayName}.jpg`}
-                      alt={`${user?.displayName} profile`}
+                      src={`/images/avatars/${user?.username}.jpg`}
+                      alt={`${user?.username} profile`}
                       onError={(e) => {
                         e.target.src = DEFAULT_IMAGE_PATH;
                       }}

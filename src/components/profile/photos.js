@@ -21,7 +21,7 @@ export default function Photos({ photos }) {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="w-8 mr-4"
+                      className="w-4 sm:w-8 mr-2 sm:mr-4"
                     >
                       <path
                         fillRule="evenodd"
@@ -37,7 +37,7 @@ export default function Photos({ photos }) {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="w-8 mr-4"
+                      className="w-4 sm:w-8 mr-2 sm:mr-4"
                     >
                       <path
                         fillRule="evenodd"

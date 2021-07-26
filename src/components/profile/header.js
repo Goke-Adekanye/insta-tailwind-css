@@ -70,6 +70,7 @@ export default function Header({
           <Skeleton circle height={150} width={150} count={1} />
         )}
       </div>
+
       <div className="flex items-center justify-center flex-col col-span-2">
         <div className="container flex items-center">
           <p className="text-xl sm:text-2xl mr-4">{profileUsername}</p>
@@ -92,6 +93,13 @@ export default function Header({
             )
           )}
         </div>
+
+        <div className="container mt-2 sm:mt-4">
+          <p className="font-medium">
+            {!fullName ? <Skeleton count={1} height={24} /> : fullName}
+          </p>
+        </div>
+
         <div className="container flex mt-4">
           {!followers || !following ? (
             <Skeleton count={1} width={677} height={24} />
@@ -110,11 +118,6 @@ export default function Header({
               </p>
             </>
           )}
-        </div>
-        <div className="container mt-4">
-          <p className="font-medium">
-            {!fullName ? <Skeleton count={1} height={24} /> : fullName}
-          </p>
         </div>
       </div>
     </div>

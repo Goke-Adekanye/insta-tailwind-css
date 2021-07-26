@@ -16,7 +16,7 @@ export default function Dashboard({ user: loggedInUser }) {
     <LoggedInUserContext.Provider value={{ user, setActiveUser }}>
       <div className="bg-gray-background">
         <Header />
-        <div className="grid grid-cols-3 gap-4 justify-between mx-auto max-w-screen-lg">
+        <div className="lg:grid lg:grid-cols-3 gap-4 lg:justify-between lg:mx-auto max-w-screen-lg">
           <Timeline />
           <Sidebar />
         </div>

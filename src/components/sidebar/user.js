@@ -9,7 +9,7 @@ const User = ({ username, fullName }) => {
   ) : (
     <Link
       to={`/p/${username}`}
-      className="grid grid-cols-4 gap-4 mb-6 items-center"
+      className="lg:grid grid-cols-4 gap-4 mb-6 items-center hidden"
     >
       <div className="flex items-center justify-between col-span-1">
         <img

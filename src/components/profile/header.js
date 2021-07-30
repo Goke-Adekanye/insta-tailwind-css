@@ -67,7 +67,13 @@ export default function Header({
             />
           </div>
         ) : (
-          <Skeleton circle height={150} width={150} count={1} />
+          <Skeleton
+            circle
+            height={100}
+            width={100}
+            count={1}
+            className="mr-1 sm:mr-auto"
+          />
         )}
       </div>
 

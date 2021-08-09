@@ -33,11 +33,11 @@ export default function Explore({ user: loggedInUser }) {
       <Header />
 
       {!profiles ? (
-        <div className="items-center justify-center px-2">
+        <div className="items-center justify-center sm:max-w-screen-sm sm:mx-auto px-2">
           <Skeleton count={5} height={200} className="mt-1" />
         </div>
       ) : profiles.length > 0 ? (
-        <div className="items-center justify-center px-2">
+        <div className="items-center justify-center sm:max-w-screen-sm sm:mx-auto px-2">
           <div className="text-sm flex items-center justify-between mb-2">
             <p className="font-bold text-lg text-gray-base">Suggestions</p>
           </div>
